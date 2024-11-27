@@ -2,7 +2,6 @@
 // [K, b, o, s, s] => Kboss input: string[] => output: string
 
 function parseString(input: string): string[];
-function parseString(input: string): string[];
 function parseString(input: string[]): string;
 function parseString(input: number): boolean;
 function parseString(input: unknown): unknown {
