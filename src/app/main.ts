@@ -1,6 +1,7 @@
 import { faker } from "@faker-js/faker";
-import { products, addProduct } from "./product/product.service"
+import { products, addProduct, updatedProduct } from "./product/product.service"
 
+// Agregar 50 productos aleatorios
 for (let i = 0; i < 50; i++) {
   addProduct({
     title: faker.commerce.productName(),
@@ -16,5 +17,12 @@ for (let i = 0; i < 50; i++) {
   });
 }
 
-
-console.log("🚀 ~ products:", products);
+// Actualizar el primer producto
+const product = products[0];
+updatedProduct(
+  product.id, {
+    title: "New title",
+    stock: 80,
+    price: 100,
+  }
+);

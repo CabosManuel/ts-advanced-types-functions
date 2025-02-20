@@ -10,3 +10,7 @@ export interface CreateProductDto extends Omit<Product, "id" | "createdAt" | "up
 // Utility Type "Pick":
 // Seleccionar atributos específicos de Produc
 // type example = Pick<Product, "title" | "description" >
+
+// Utility Type "Partial":
+// Combierte todos los atributos a opcionales (?)
+export interface UpdateProductDto extends Partial<CreateProductDto> { };
